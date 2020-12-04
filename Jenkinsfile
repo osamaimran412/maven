@@ -8,13 +8,16 @@ tools
 }
 stages 
 {
- stage ("Compile") {
+ stage ('Compile') {
+    git 'https://github.com/osamaimran412/maven.git'
    sh "mvn clear compile"
    }
-   stage ("Test"){
+   stage ('Test'){
+     git 'https://github.com/osamaimran412/maven.git'
     sh "mvn clear test"
     }   
-    stage ("Deploy"){
+    stage ('Deploy'){
+    git 'https://github.com/osamaimran412/maven.git'  
     sh "mvn clear install"
     }
  }
